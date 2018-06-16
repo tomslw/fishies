@@ -1,0 +1,29 @@
+Module VBModule
+  
+  sub big()
+  randomize
+    dim m(100,100) as integer
+    dim i,o as integer
+    for i=1 to 99
+        for o=1 to 99
+            m(i,o) = int(rnd*101)
+            if (m(i,o)>40) and (m(i,o)<60) then
+                console.write("<><")
+            else
+                console.write("°°°")
+            end if
+        next
+        console.writeline()
+    next
+    end sub
+  
+    Sub Main()
+    dim awnser as string
+        do
+        big()
+        console.writeline("More fishies? ye/na")
+        awnser = console.readline()
+        loop while awnser = "ye"
+    End Sub
+  
+End Module
